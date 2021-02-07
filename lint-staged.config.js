@@ -7,5 +7,8 @@ module.exports = {
 
   // format all files
   '**/*': (filenames) =>
-    filenames.map((filename) => `prettier --write '${filename}'`),
+    filenames.map(
+      (filename) =>
+        `prettier --config ./.prettierrc.js --write '${filename}' --ignore-unknown`
+    ),
 }
