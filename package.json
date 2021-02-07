@@ -5,22 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
-    "type-check": "tsc --pretty --noEmit"
+    "start": "next start"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run type-check"
+      "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.@(js|ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
   },
   "dependencies": {
     "@fontsource/inter": "4.2.0",
