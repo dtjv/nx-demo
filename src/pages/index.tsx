@@ -1,11 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, ReactElement } from 'react'
 import { useTheme } from 'next-themes'
 import { ThemeButton } from '@/components/theme-button'
 
-export default function Home() {
+export default function Home(): ReactElement {
   const { theme, setTheme, systemTheme } = useTheme()
 
-  useEffect(() => setTheme(systemTheme ?? 'light'), [])
+  useEffect(() => setTheme(systemTheme ?? 'light'), [setTheme, systemTheme])
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
