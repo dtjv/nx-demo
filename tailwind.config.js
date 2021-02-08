@@ -13,10 +13,36 @@ module.exports = {
       colors: {
         gray: colors.trueGray,
       },
+      typography: (theme) => ({
+        default: {
+          css: {
+            color: theme('colors.gray.900'),
+            a: {
+              color: theme('colors.blue.500'),
+              '&:hover': {
+                color: theme('colors.blue.700'),
+              },
+            },
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.gray.100'),
+            a: {
+              color: theme('colors.blue.100'),
+              '&:hover': {
+                color: theme('colors.blue.100'),
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      typography: ['dark'],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }
