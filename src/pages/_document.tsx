@@ -6,7 +6,7 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body className="text-white bg-white dark:bg-black dark:text-black">
+        <body>
           <Main />
           <NextScript />
         </body>

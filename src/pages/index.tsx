@@ -1,6 +1,7 @@
 import { useEffect, ReactElement } from 'react'
 import { useTheme } from 'next-themes'
 import { ThemeButton } from '@/components/theme-button'
+import { Layout } from '@/components/layout'
 
 export default function Home(): ReactElement {
   const { theme, setTheme, systemTheme } = useTheme()
@@ -12,20 +13,15 @@ export default function Home(): ReactElement {
   }
 
   return (
-    <div className="bg-white dark:bg-black">
-      <div className="flex flex-col items-center justify-center py-20">
-        <h1 className="text-5xl font-bold text-center text-gray-800 dark:text-gray-100">
-          Hello World
-        </h1>
-        <ThemeButton toggleTheme={toggleTheme} />
-        {/*
-        <ThemeButton
-          toggleTheme={() => {
-            setTheme(theme === 'light' ? 'dark' : 'light')
-          }}
-        />
-        */}
+    <Layout>
+      <div className="px-12">
+        <div className="py-12">
+          <div className="space-y-8">
+            <h1 className="text-5xl text-bold">Hello World</h1>
+            <ThemeButton toggleTheme={toggleTheme} />
+          </div>
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
