@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "prettier -w .",
+    "lint": "eslint .",
+    "type-check": "tsc --pretty --noEmit",
     "postinstall": "is-ci || husky install"
+  },
+  "lint-staged": {
+    "*.@(js|ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@fontsource/inter": "4.2.0",
