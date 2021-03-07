@@ -2,11 +2,9 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    es2021: true,
   },
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 12,
-  },
   settings: {
     react: {
       version: 'detect',
@@ -26,7 +24,6 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
-    'prettier/@typescript-eslint',
   ],
   rules: {
     'react/prop-types': 'off',
