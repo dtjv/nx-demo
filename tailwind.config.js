@@ -14,7 +14,8 @@ module.exports = {
         gray: colors.trueGray,
       },
       typography: (theme) => ({
-        default: {
+        // these settings, DEFAULT and dark only work for `prose`.
+        DEFAULT: {
           css: {
             color: theme('colors.gray.900'),
             a: {
@@ -33,6 +34,9 @@ module.exports = {
               '&:hover': {
                 color: theme('colors.blue.100'),
               },
+            },
+            h2: {
+              color: theme('colors.gray.100'),
             },
           },
         },
