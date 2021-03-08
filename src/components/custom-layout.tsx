@@ -1,15 +1,13 @@
 import * as React from 'react'
 
-interface CustomLayoutProps {
+interface Props {
   meta: {
     title: string
   }
+  children: React.ReactElement
 }
 
-const CustomLayout: React.FunctionComponent<CustomLayoutProps> = ({
-  children,
-  meta,
-}) => {
+function CustomLayout({ meta, children }: Props) {
   return (
     <div className="bg-purple-50 dark:bg-purple-900 space-y-8">
       <div className="px-12">

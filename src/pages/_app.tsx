@@ -1,14 +1,16 @@
 import '@fontsource/inter/variable.css'
 import '../styles/app.css'
 
-import { ReactElement } from 'react'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
+import { Layout } from '@/components/layout'
 
-function App({ Component, pageProps }: AppProps): ReactElement {
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider defaultTheme="system" enableSystem={true} attribute="class">
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }

@@ -1,27 +1,18 @@
-import { useEffect, ReactElement } from 'react'
-import { useTheme } from 'next-themes'
 import { ThemeButton } from '@/components/theme-button'
-import { Layout } from '@/components/layout'
 
-export default function Home(): ReactElement {
-  const { theme, setTheme, systemTheme } = useTheme()
-
-  useEffect(() => setTheme(systemTheme ?? 'light'), [setTheme, systemTheme])
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
-
+function HomePage() {
   return (
-    <Layout>
-      <div className="px-12">
-        <div className="py-12">
-          <div className="space-y-8">
-            <h1 className="text-5xl text-bold">Hello World</h1>
-            <ThemeButton toggleTheme={toggleTheme} />
+    <div className="px-12">
+      <div className="py-12">
+        <div className="space-y-8">
+          <h1 className="text-3xl text-bold">Hello World</h1>
+          <div>
+            <ThemeButton />
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
+
+export default HomePage

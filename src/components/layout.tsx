@@ -1,11 +1,19 @@
 import * as React from 'react'
+import { useTheme } from 'next-themes'
 
-const Layout: React.FunctionComponent = ({ children }) => {
-  return (
-    <div className="dark:bg-black dark:text-white">
-      <div>{children}</div>
-    </div>
-  )
+interface Props {
+  children: React.ReactElement
+}
+
+function Layout({ children }: Props) {
+  const { setTheme, systemTheme } = useTheme()
+
+  React.useEffect(() => setTheme(systemTheme ?? 'light'), [
+    setTheme,
+    systemTheme,
+  ])
+
+  return <div className="dark:bg-black dark:text-white">{children}</div>
 }
 
 export { Layout }

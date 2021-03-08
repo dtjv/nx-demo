@@ -1,18 +1,30 @@
-import { ReactElement } from 'react'
+import * as React from 'react'
+import { useTheme } from 'next-themes'
 
-interface ThemeButtonProps {
-  toggleTheme: () => void
-}
+function ThemeButton() {
+  const [mounted, setMounted] = React.useState(false)
+  const { theme, setTheme } = useTheme()
 
-const ThemeButton = ({ toggleTheme }: ThemeButtonProps): ReactElement => {
+  React.useEffect(() => setMounted(true), [])
+
+  if (!mounted) return <ThemeButtonSkeleton />
+
   return (
     <button
-      className="px-4 py-2 mt-16 font-semibold text-white bg-black dark:text-black dark:bg-white rounded-md"
-      onClick={toggleTheme}
+      className="px-4 py-2 font-medium text-white bg-gray-900 dark:text-gray-900 dark:bg-white rounded-md focus:outline-none"
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      Toggle Theme
+      {theme}
     </button>
   )
 }
 
 export { ThemeButton }
+
+function ThemeButtonSkeleton(): React.ReactElement {
+  return (
+    <div className="animate-pulse">
+      <div className="h-8 bg-gray-300 w-14 rounded-md"></div>
+    </div>
+  )
+}
