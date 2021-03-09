@@ -14,7 +14,7 @@ pre[class*='language-'] {
   @apply font-mono;
 }
 
-pre[class*='language-'] {
+.remark-code-title + pre[class*='language-'] {
   @apply mt-0 rounded-t-none;
 }
 
