@@ -34,6 +34,9 @@ module.exports = {
             h2: {
               color: theme('colors.gray.100'),
             },
+            strong: {
+              color: theme('colors.gray.100'),
+            },
           },
         },
       }),

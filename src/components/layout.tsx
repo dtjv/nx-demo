@@ -13,7 +13,11 @@ function Layout({ children }: Props) {
     systemTheme,
   ])
 
-  return <div className="dark:bg-black dark:text-white">{children}</div>
+  return (
+    <div className="antialiased text-gray-500 bg-white dark:bg-gray-900 dark:text-gra y-50">
+      {children}
+    </div>
+  )
 }
 
 export { Layout }

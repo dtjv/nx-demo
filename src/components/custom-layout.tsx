@@ -16,13 +16,13 @@ function CustomLayout({ meta, children }: Props) {
         title={meta.title}
         titleTemplate={`${seoDefaults.defaultTitle} | %s`}
       />
-      <div className="bg-purple-50 dark:bg-purple-900 space-y-8">
+      <div className="text-gray-900 prose dark:prose-dark max-w-none bg-purple-50 dark:bg-purple-900 dark:text-gray-50 space-y-8">
         <div className="px-12">
           <div className="py-12">
-            <h1 className="text-5xl font-bold text-purple-500 dark:text-white">
+            <h1 className="text-5xl font-bold dark:text-gray-50">
               {meta.title}
             </h1>
-            <div className="prose dark:prose-dark max-w-none">{children}</div>
+            <div>{children}</div>
           </div>
         </div>
       </div>
