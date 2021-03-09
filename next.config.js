@@ -3,16 +3,14 @@ const withMDX = require('@next/mdx')
 
 const mdxConfig = {
   extension: /\.mdx?$/,
-  /*
   options: {
-    remarkPlugins: [
-      require('remark-slug'),
-      require('remark-footnotes'),
-      require('remark-code-titles'),
+    remarkPlugins: [require('remark-code-titles')],
+    rehypePlugins: [
+      require('rehype-slug'),
+      [require('rehype-autolink-headings'), { behavior: 'wrap' }],
+      require('mdx-prism'),
     ],
-    rehypePlugins: [require('mdx-prism')],
   },
-  */
 }
 
 const nextConfig = {

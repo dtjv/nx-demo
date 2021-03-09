@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.{ts,tsx}'],
@@ -10,15 +9,12 @@ module.exports = {
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        gray: colors.trueGray,
-      },
       typography: (theme) => ({
-        // these settings, DEFAULT and dark only work for `prose`.
         DEFAULT: {
           css: {
             color: theme('colors.gray.900'),
             a: {
+              textDecoration: 'no-underline',
               color: theme('colors.blue.500'),
               '&:hover': {
                 color: theme('colors.blue.700'),

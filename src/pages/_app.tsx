@@ -1,3 +1,4 @@
+import 'prismjs/themes/prism-tomorrow.css'
 import '@fontsource/inter/variable.css'
 import '../styles/app.css'
 
