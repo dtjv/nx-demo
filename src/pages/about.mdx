@@ -1,31 +1,22 @@
-import { CustomLayout } from '@/components/custom-layout'
+import { MdxLayout } from '@/layouts/mdx-layout'
 import { Counter } from '@/components/counter'
 
 export const meta = {
   title: 'About',
 }
 
-export default CustomLayout
+export default MdxLayout
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-[Home](/)
+Well, I thought the `MdxLayout` would replace the default layout. Instead,
+`MdxLayout` remains a child of `Layout` and simply wraps this document.
 
 ## Code Example
 
-```typescript:hello.ts
-interface Props {
-  name: string
-}
-
-function setCap({ name }: Props): string {
-  return name.toUpperCase()
+```typescript:greeting.ts
+function greeting(message: string): string {
+  return `Hello! ${message}`
 }
 ```
-
-here's another code snippet w/o a file.
 
 ```json
 {
@@ -37,4 +28,4 @@ here's another code snippet w/o a file.
 
 <Counter />
 
-This Counter component is inheriting prose styles. **damn!**
+The `Counter` component above is inheriting the `prose` styles defined in `MdxLayout`. There is no way to turn off `prose` styling for a specific tag and its children. So, components placed within a `prose` container must be mindful of the `prose` styling influence.

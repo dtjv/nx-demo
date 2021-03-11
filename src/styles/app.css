@@ -19,5 +19,5 @@ pre[class*='language-'] {
 }
 
 .remark-code-title {
-  @apply px-4 py-4 font-mono text-sm text-gray-200 bg-gray-900 rounded-t-md;
+  @apply px-4 py-3 font-mono text-sm text-gray-200 bg-gray-900 rounded-t-md;
 }

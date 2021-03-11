@@ -14,7 +14,7 @@ function Layout({ children }: Props) {
   ])
 
   return (
-    <div className="antialiased text-gray-500 bg-white dark:bg-gray-900 dark:text-gra y-50">
+    <div className="antialiased text-gray-500 bg-white dark:bg-black dark:text-gray-200">
       {children}
     </div>
   )

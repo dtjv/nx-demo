@@ -7,7 +7,9 @@ function HomePage() {
     <div className="px-12">
       <div className="py-12">
         <div className="space-y-8">
-          <h1 className="text-3xl text-bold">Hello World</h1>
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-200">
+            Hello World
+          </h1>
           <div>
             <ThemeButton />
           </div>

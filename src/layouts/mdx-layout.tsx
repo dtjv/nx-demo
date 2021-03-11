@@ -9,17 +9,17 @@ interface Props {
   children: React.ReactElement
 }
 
-function CustomLayout({ meta, children }: Props) {
+function MdxLayout({ meta, children }: Props) {
   return (
     <>
       <NextSeo
         title={meta.title}
         titleTemplate={`${seoDefaults.defaultTitle} | %s`}
       />
-      <div className="text-gray-900 prose dark:prose-dark max-w-none bg-purple-50 dark:bg-purple-900 dark:text-gray-50 space-y-8">
+      <div className="text-gray-500 prose dark:prose-dark max-w-none dark:bg-black dark:text-gray-200">
         <div className="px-12">
           <div className="py-12">
-            <h1 className="text-5xl font-bold dark:text-gray-50">
+            <h1 className="text-5xl font-bold dark:text-gray-200">
               {meta.title}
             </h1>
             <div>{children}</div>
@@ -30,4 +30,4 @@ function CustomLayout({ meta, children }: Props) {
   )
 }
 
-export { CustomLayout }
+export { MdxLayout }

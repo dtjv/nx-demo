@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 
-import { Layout } from '@/components/layout'
+import { Layout } from '@/layouts/layout'
 import { seoDefaults } from '@/next-seo.config'
 
 function App({ Component, pageProps }: AppProps) {

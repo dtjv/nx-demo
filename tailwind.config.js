@@ -15,27 +15,33 @@ module.exports = {
             color: theme('colors.gray.900'),
             a: {
               textDecoration: 'no-underline',
-              color: theme('colors.blue.500'),
+              color: theme('colors.gray.900'),
               '&:hover': {
-                color: theme('colors.blue.700'),
+                color: theme('colors.gray.700'),
               },
             },
           },
         },
         dark: {
           css: {
-            color: theme('colors.gray.100'),
+            // here, i set the default dark mode text color
+            color: theme('colors.gray.200'),
+
+            // BUT, i still need to add color settings for these tags.
             a: {
-              color: theme('colors.blue.100'),
+              color: theme('colors.gray.200'),
               '&:hover': {
-                color: theme('colors.blue.100'),
+                textDecoration: 'underline',
               },
             },
             h2: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.200'),
             },
             strong: {
-              color: theme('colors.gray.100'),
+              color: theme('colors.gray.200'),
+            },
+            code: {
+              color: theme('colors.gray.200'),
             },
           },
         },
