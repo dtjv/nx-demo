@@ -5,6 +5,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
       "@/*": ["../*"],
+      "@/hooks/*": ["hooks/*"],
       "@/layouts/*": ["layouts/*"],
       "@/components/*": ["components/*"]
     },
