@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+
+# testing
+/cypress/videos
+/cypress/plugins
+/cypress/support
+

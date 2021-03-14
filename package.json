@@ -2,11 +2,13 @@
   "name": "next-poc",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "test:e2e": "cd e2e && yarn cy:run",
     "format": "prettier -w .",
     "lint": "eslint .",
     "type-check": "tsc --pretty --noEmit",
