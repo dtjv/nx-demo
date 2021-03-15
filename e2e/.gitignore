@@ -4,5 +4,5 @@
 # testing
 /cypress/videos
 /cypress/plugins
-/cypress/support
+/cypress/screenshots
 

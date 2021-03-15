@@ -1,6 +1,16 @@
-// a basic cypress test
+/// <reference path="../support/index.d.ts" />
 
-it('should perform basic google search', () => {
-  cy.visit('https://google.com')
-  cy.get('[name="q"]').type('subscribe').type('{enter}')
+describe('About', () => {
+  beforeEach(() => {
+    cy.visit('/about')
+  })
+
+  it('should display a heading', () => {
+    cy.getBySel('about-title').contains('About')
+  })
+
+  it('should show correct count on increment', () => {
+    cy.getBySel('increment').click()
+    cy.getBySel('count').should('contain', 'Count is: 1')
+  })
 })

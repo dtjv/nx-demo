@@ -30,6 +30,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'unicorn/prevent-abbreviations': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   ignorePatterns: [
     'node_modules/*',
