@@ -1,31 +1,30 @@
-# next-poc
+# nx-demo
 
-A simple proof-of-concept app using various tech. A work-in-progress.
+A nextjs proof-of-concept app using various tech. [WIP]
 
 ## Concepts / Tech
 
-- [x] nextjs
-- [x] typescript
-- [x] tailwindcss
-- [x] linting
-- [x] typecheck
-- [x] mdx
-- [ ] auth
-- [ ] animation
-  - [ ] framer motion
-  - [ ] react-scroll
-- [ ] make a interactive component for mdx
-- [ ] add remark & rehype plugins
-- [ ] next-seo / next-sitemap - research
-- [ ] shrink tailwind (remove core plugins)
-- [ ] add full themes for light & dark
+- [x] add nextjs
+- [x] add typescript
+- [x] add tailwindcss
+  - [x] enable dark mode
+  - [ ] use jit compiler
+- [x] add linting
+- [x] add typecheck
+- [x] add mdx
+  - [x] add remark & rehype plugins
+  - [x] add an interactive component
+- [x] add next-seo
+  - [x] use env vars for config
+- [x] add tests
+  - [x] jest
+  - [x] cypress
+- [ ] add github actions
+- [ ] add layout persistence
+- [ ] add passwordless
 - [ ] add animation
-  - [ ] framer motion
-  - [ ] react scroll
-- [ ] testing
-  - [ ] jest
-  - [ ] cypress
-- [ ] ci / cd via github actions
+  - [ ] page transition
+  - [ ] infinite scroll
 
 ## Author
 
